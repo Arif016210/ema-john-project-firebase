@@ -24,9 +24,9 @@ function App() {
 
   return (
     <UserContext.Provider value={[logInUser, setLogInUser]}>
-      <h3>Email : {logInUser.email} </h3>
-      <Header></Header>
+
       <Router>
+        <Header></Header>
         <Switch>
           <Route path="/shop">
             <Shop></Shop>
@@ -34,7 +34,7 @@ function App() {
           <Route path="/review">
             <Review></Review>
           </Route>
-          <PrivateRoute path="/invntory">
+          <PrivateRoute path="/inventory">
             <Inventory></Inventory>
           </PrivateRoute>
           <Route path="/login">
